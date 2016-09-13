@@ -80,6 +80,8 @@ You can look at the transaction detail like this:
 > eth.getTransaction(tx)
 or
 > eth.getBlock("pending", true).transactions
+or
+> eth.pendingTransactions
 ```
 
 This output indicates that there is one transaction pending.
@@ -104,9 +106,17 @@ If your transaction is pending forever, why ?
 If you running your nodes on testnet check your transaction, balances, block,
 and etc.  http://testnet.etherscan.io
 
+Getting account balances. Try this one line at at time.
+```javascript
+eth.getBalance(eth.accounts[1])
+web3.fromWei(eth.getBalance(eth.accounts[1]))
+for (e in eth.accounts) { console.log(eth.getBalance(eth.accounts[e])) };
+```
+
+
 Geth can execute java script directly.
 ```
-$ .geth --exec 'loadScript("checkbalances.js")' attach http://localhost:8545
+$ geth --exec 'loadScript("checkbalances.js")' attach http://localhost:8545
 ```
 
 ## Your first contract
