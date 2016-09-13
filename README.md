@@ -21,13 +21,17 @@ sudo apt-get install ethereum
 ```
 
 ### Install nodejs
+```
 sudo apt-get -y install nodejs
 sudo apt-get -y install npm
 sudo apt-get -y install git
 npm install web3
+```
 
 ### Install Solidity (optional)
+```
 npm install solc
+```
 
 ### Useful links
 * http://www.ethdocs.org/en/latest/
