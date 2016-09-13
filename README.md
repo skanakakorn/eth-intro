@@ -26,6 +26,7 @@ sudo apt-get -y install nodejs
 sudo apt-get -y install npm
 sudo apt-get -y install git
 npm install web3
+npm install minimist
 ```
 
 ### Install Solidity (optional)
@@ -115,8 +116,15 @@ Getting account balances. Try this one line at at time.
 eth.getBalance(eth.accounts[1])
 web3.fromWei(eth.getBalance(eth.accounts[1]))
 for (e in eth.accounts) { console.log(eth.getBalance(eth.accounts[e])) };
+loadScript('gethutil.js')
+checkAllBalances()
 ```
 
+Sending ether via javascript. Make sure you modify your port in send_ether.js
+properly.
+```
+nodejs send_ether.js --to ADDRESS
+```
 
 Geth can execute java script directly.
 ```
