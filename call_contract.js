@@ -21,9 +21,13 @@ accounts = web3.eth.accounts;
 web3.personal.unlockAccount(accounts[0],"password1",6000)
 from_account = accounts[0];
 
-abi = [{"constant":false,"inputs":[{"name":"s","type":"string"}],"name":"set","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"retVal","type":"string"}],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":false,"name":"s","type":"string"}],"name":"Set","type":"event"}]
-
+// Replace the contract address with the one you created.
+// This is not the account address
 contract_address = "0xa957F6211F48baD6ACdFb5aCC68E1F98A8596303"
+
+// replace this abi with the correct abi from the “Interface” output of online
+// compiler.
+abi = [{"constant":false,"inputs":[{"name":"s","type":"string"}],"name":"set","outputs":[],"type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"retVal","type":"string"}],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":false,"name":"s","type":"string"}],"name":"Set","type":"event"}]
 
 contract = web3.eth.contract(abi).at(contract_address)
 tx_hash = contract.set.sendTransaction("Nice One",{from: from_account})
@@ -35,6 +39,7 @@ console.log(contract.get())
 // with the block number
 console.log('Getting tx_receipt if block contained tx is mined. Ctrl-c is okay')
 // This could be improve by callback when tx is mined rather than sleeping
+
 setTimeout(function(){
 tx_receipt = web3.eth.getTransactionReceipt(tx_hash)
 console.log('Got tx_receipt :' + tx_receipt + 
