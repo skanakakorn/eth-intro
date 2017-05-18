@@ -1,4 +1,4 @@
-/Applications/Mist.app/Contents/Frameworks/node/geth/geth --testnet --fast \
+$HOME/geth --testnet --fast \
 --ipcpath /Users/skanan/Library/Ethereum/geth.ipc \
 --rpccorsdomain "*" --rpc \
 --rpcport 8545 \
