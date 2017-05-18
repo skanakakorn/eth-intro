@@ -45,16 +45,3 @@ https://docs.google.com/document/d/1wf58CgA5oROtGgKfv5XtbnZUcYfMhf4MfTNK9xHYgqs/
 ### Useful links
 * http://www.ethdocs.org/en/latest/
 * https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts
-
-## Starting Ethereum
-Starting Ethereum node and connect to public test network
-```
-cd eth-intro
-./ge.sh console
-```
-
-Connect to the local node. Do this on a separate ssh prompt.
-```
-geth attach http://localhost:8545
-geth attach ipc://$HOME/.ethereum/testnet/geth.ipc
-```
