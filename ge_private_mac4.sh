@@ -1,5 +1,6 @@
 #!/bin/bash
-geth --identity "node4" \
+$HOME/geth \
+--identity "node4" \
 --datadir "$HOME/myetherdata/testdata4" \
 --ipcpath ~/Library/Ethereum/geth.ipc \
 --rpccorsdomain "*" --rpc \

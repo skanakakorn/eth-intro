@@ -9,22 +9,27 @@ you to programming on Ethereum platform.
 
 The tutorial is written with Ethereum Homestead using Ubuntu 14.04. For non-Ubuntu specific, this works on Mac OS X as well.
 
-## Installation on Ubuntu 14.04
+## Installation on Ubuntu 16.04
 
 ### Install Ethereum
 ```
 sudo apt-get install software-properties-common
 sudo add-apt-repository -y ppa:ethereum/ethereum
-sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 sudo apt-get update
 sudo apt-get install ethereum
 ```
 
-### Install nodejs
+### Install nodejs and npm
 ```
 sudo apt-get -y install nodejs
 sudo apt-get -y install npm
 sudo apt-get -y install git
+sudo apt install npm  # This can take a while
+```
+
+### Install other node modules
+```
+npm init -y
 npm install web3
 npm install minimist
 ```
@@ -33,6 +38,9 @@ npm install minimist
 ```
 npm install solc
 ```
+
+### Setup Ethereum to run as private blockchain
+https://docs.google.com/document/d/1wf58CgA5oROtGgKfv5XtbnZUcYfMhf4MfTNK9xHYgqs/edit#
 
 ### Useful links
 * http://www.ethdocs.org/en/latest/
@@ -49,7 +57,9 @@ Creates a new account and prints the address.
 On the console, use:
 
 ```
-> personal.newAccount("passphrase")
+> personal.newAccount("password1")
+
+> personal.newAccount()
 Passphrase: 
 Repeat passphrase: 
 "0x257918acc909e5eaf049fe4eb6aff9d6d3529b1f"
