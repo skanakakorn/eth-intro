@@ -13,6 +13,10 @@ var argv = require('minimist')(process.argv.slice(2), {
 });
 
 to_account = argv['to']
+if (! to_account) { 
+  console.log('Missing address for --to') 
+  process.exit(1)
+}
 
 if (typeof web3 == 'undefined') {
   // This is likely the case when running from nodejs
