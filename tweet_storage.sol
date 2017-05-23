@@ -1,3 +1,5 @@
+pragma solidity ^0.4.10;
+
 // "class" TweetStorage
 contract TweetStorage {
   
@@ -13,7 +15,7 @@ contract TweetStorage {
   event Tweet(  
     address indexed _from,
     string s,
-    int _tweetCount
+    uint256 _tweetCount
   );
 
   // constructor
