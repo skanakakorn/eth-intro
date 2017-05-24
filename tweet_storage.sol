@@ -39,7 +39,7 @@ contract TweetStorage {
       _tweetCount++;
       result = 0; // success
     }
-    Tweet(msg.sender, tweetString, _tweetCount)
+    Tweet(msg.sender, tweetString, _tweetCount);
   }
   
   function getTweet(uint tweetId) constant returns (string tweetString) {
@@ -58,11 +58,4 @@ contract TweetStorage {
   function getNumberOfTweets() constant returns (uint numberOfTweets) {
     return _tweetCount;
   }
-
-  function adminDeleteAccount() {
-    if (isAdmin()) {
-      // Deletes the contract and returns all funds to the owner's address
-      suicide(_adminAddress); 
-    }
-  } 
 }
