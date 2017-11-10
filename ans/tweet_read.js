@@ -45,7 +45,7 @@ if (argv['latest']) {
   console.log("Latest tweets:" + tweet_contract.getLatestTweet())
 }
 
-if (argv['id']) {
+if (typeof argv['id'] != 'undefined') {
   console.log("Tweet id:" + tweet_contract.getTweet(argv['id']))
 }
 
