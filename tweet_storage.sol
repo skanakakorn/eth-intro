@@ -19,18 +19,18 @@ contract TweetStorage {
   );
 
   // constructor
-  function TweetStorage() {
+  function TweetStorage() public {
     _tweetCount = 0;
     _adminAddress = msg.sender;
   }
   
   // returns true if caller of function ("sender") is admin
-  function isAdmin() constant returns (bool isAdmin) {
+  function isAdmin() constant public returns (bool) {
     return msg.sender == _adminAddress;
   }
   
   // create new tweet
-  function tweet(string tweetString) returns (int result) {
+  function tweet(string tweetString) public returns (int result) {
     if (bytes(tweetString).length > 256) {
       // limit to 256 bytes
       result = -3;
@@ -42,20 +42,20 @@ contract TweetStorage {
     Tweet(msg.sender, tweetString, _tweetCount);
   }
   
-  function getTweet(uint tweetId) constant returns (string tweetString) {
+  function getTweet(uint tweetId) constant public returns (string tweetString) {
     tweetString = _tweets[tweetId];
   }
   
-  function getLatestTweet() constant returns (string tweetString, uint numberOfTweets) {
+  function getLatestTweet() constant public returns (string tweetString, uint numberOfTweets) {
     tweetString = _tweets[_tweetCount - 1];
     numberOfTweets = _tweetCount;
   }
   
-  function getOwnerAddress() constant returns (address adminAddress) {
+  function getOwnerAddress() constant public returns (address adminAddress) {
     return _adminAddress;
   }
   
-  function getNumberOfTweets() constant returns (uint numberOfTweets) {
+  function getNumberOfTweets() constant public returns (uint numberOfTweets) {
     return _tweetCount;
   }
 }
