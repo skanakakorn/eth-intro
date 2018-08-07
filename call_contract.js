@@ -18,7 +18,7 @@ if (typeof web3 == 'undefined') {
 
 accounts = web3.eth.accounts;
 // unlock from_account 600 secs
-web3.personal.unlockAccount(accounts[0],"password1",6000)
+web3.personal.unlockAccount(accounts[0],"",6000)
 from_account = accounts[0];
 
 // Replace the contract address with the one you created.

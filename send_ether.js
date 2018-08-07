@@ -29,7 +29,7 @@ if (typeof web3 == 'undefined') {
 
 var accounts = web3.eth.accounts;
 // unlock from_account 600 secs
-web3.personal.unlockAccount(accounts[0],"password1",600)
+web3.personal.unlockAccount(accounts[0],"",600)
 var from_account = accounts[0];
 // var to_account = accounts[1];
 // to_account = "0xd249f7f4eea84cd35d0045c0c7b88d4703647339"

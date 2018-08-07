@@ -26,7 +26,7 @@ console.log(argv)
 
 accounts = web3.eth.accounts;
 // unlock from_account 600 secs
-// web3.personal.unlockAccount(accounts[from_address_index],"password1",6000)
+// web3.personal.unlockAccount(accounts[from_address_index],"",6000)
 from_account = accounts[0];
 console.log("Using account: " + from_account)
 
