@@ -19,7 +19,7 @@ contract TweetStorage {
   );
 
   // constructor
-  function TweetStorage() public {
+  constructor() public {
     _tweetCount = 0;
     _adminAddress = msg.sender;
   }
@@ -39,7 +39,7 @@ contract TweetStorage {
       _tweetCount++;
       result = 0; // success
     }
-    Tweet(msg.sender, tweetString, _tweetCount);
+    emit Tweet(msg.sender, tweetString, _tweetCount);
   }
   
   function getTweet(uint tweetId) constant public returns (string tweetString) {
