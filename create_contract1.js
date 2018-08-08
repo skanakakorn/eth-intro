@@ -12,7 +12,7 @@ if (typeof web3 == 'undefined') {
 
 // unlock from_account 6000 secs
 accounts = web3.eth.accounts;
-web3.personal.unlockAccount(accounts[0],"password1",6000)
+web3.personal.unlockAccount(accounts[0],"",6000)
 
 // Replace lines below with codes paste from online compiler
 
