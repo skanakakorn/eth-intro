@@ -28,7 +28,7 @@ if (! from_address_index) {
 msg_array = argv['_']
 msg = msg_array[0]
 if (! msg) {
-  console.log('Usage --from_idx address_index "message"') 
+  console.log('Usage --from_index address_index "message"') 
   process.exit(1)
 }
 
