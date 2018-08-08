@@ -28,7 +28,7 @@ if (! from_address_index) {
 msg_array = argv['_']
 msg = msg_array[0]
 if (! msg) {
-  console.log('Usage --from_idx address_index "message"') 
+  console.log('Usage --from_index address_index "message"') 
   process.exit(1)
 }
 
@@ -40,13 +40,14 @@ console.log("Using account: " + from_account)
 
 // Replace the contract address with the one you created.
 // This is not the account address
-tweet_contract_address = "0x7f4340494634395d2501e7a75487da032648f6b5"
+tweet_contract_address = "0x3db12984dfc41d31736e62eceaae19b61398287d"
 
 // replace this abi with the correct abi from the “Interface” output of online
 // compiler.
 tweet_abi = []
+
 tweet_contract = web3.eth.contract(tweet_abi).at(tweet_contract_address)
-tx_hash = tweet_contract.tweet.sendTransaction("Beyond", {from: from_account, gas:100})
+tx_hash = tweet_contract.tweet.sendTransaction("Beyond", {from: from_account, gas:1000})
 
 tx_data = web3.eth.getTransaction(tx_hash)
 console.log("Number of tweets:" + tweet_contract.getNumberOfTweets())
