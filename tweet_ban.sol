@@ -47,7 +47,7 @@ contract TweetStorage {
   
   // create new tweet
   function tweet(string tweetString) returns (int result) {
-    if (isBan()) {
+    if (isBan(msg.sender)) {
       Ban(msg.sender);
       result = -4;
       return result;
