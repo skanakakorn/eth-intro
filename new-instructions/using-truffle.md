@@ -186,3 +186,5 @@ truffle(deveth)> tkn.totalSupply.call().then(s => s.toNumber())
 
 Note that the Token contract we deployed implements the ERC20 token standard, you can use Metamask to interact with it 
 (see [Using Metamask](./using-metamask.md)).
+
+**Note: The truffle project directory is available at branch `truffle-project`.**
