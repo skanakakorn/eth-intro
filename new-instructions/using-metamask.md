@@ -46,3 +46,6 @@ For the dev network, the keystore is located in `$HOME/myetherdata/devdata/keyst
 You can use Metamask UI to send ether to other accounts. Simply click "send" and follow the simple UI.
 
 ![Sending Transactions](./img/send-transaction.png)
+
+## Using Metamask with the ERC20 Tokens
+
