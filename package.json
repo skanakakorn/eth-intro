@@ -1,0 +1,27 @@
+{
+  "name": "eth-intro",
+  "version": "1.0.0",
+  "description": "Copyright by Suttipong Kanakakorn 2017.",
+  "main": "call_contract.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peawyoyoyin/eth-intro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peawyoyoyin/eth-intro/issues"
+  },
+  "homepage": "https://github.com/peawyoyoyin/eth-intro#readme",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "web3": "^0.20.7"
+  }
+}

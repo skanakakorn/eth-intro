@@ -12,7 +12,7 @@ if (typeof web3 == 'undefined') {
   var Web3 = require('web3');
   // set the provider you want from Web3.providers
   var web3 = new Web3(new
-    Web3.providers.HttpProvider("http://192.168.56.102:8545"));
+    Web3.providers.HttpProvider("http://localhost:8545"));
 } 
 
 var argv = require('minimist')(process.argv.slice(2));
@@ -32,7 +32,10 @@ console.log("Using account: " + from_account)
 
 // Replace the contract address with the one you created.
 // This is not the account address
-tweet_contract_address = "0x7f4340494634395d2501e7a75487da032648f6b5"
+tweet_contract_address = "0xbb29cc74cbf9c621bc0d442f86f1196a6bd6caa1"
+
+// this fixes errors on dev network
+web3.eth.isSyncing(() => console.log('sync'))
 
 // replace this abi with the correct abi from the “Interface” output of online
 // compiler.
